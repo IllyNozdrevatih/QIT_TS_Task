@@ -38,7 +38,7 @@ export default Vue.extend({
   },
   methods: {
     ...mapMutations("product",["ADD_ALL_PRODUCTS_TO_CHECKED_ARRAY"]),
-    productTableCheckboxHandler(e){
+    productTableCheckboxHandler(e:any){
       if (e.target.checked) {
         this.ADD_ALL_PRODUCTS_TO_CHECKED_ARRAY()
         return

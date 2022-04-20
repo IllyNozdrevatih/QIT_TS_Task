@@ -19,12 +19,12 @@ export default Vue.extend({
   name: 'ProductTableRow',
   props: {
     product: {
-      type: ProductTableRowInterface
+      type: Object as () => ProductTableRowInterface
     }
   },
   methods: {
     ...mapMutations("product", ["ADD_PRODUCT_TO_CHECKED_ARRAY", "REMOVE_PRODUCT_TO_CHECKED_ARRAY"]),
-    productCheckboxHandler(e) {
+    productCheckboxHandler(e:any) {
       if (e.target.checked) {
         this.ADD_PRODUCT_TO_CHECKED_ARRAY(this.product.id)
         return

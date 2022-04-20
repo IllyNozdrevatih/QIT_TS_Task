@@ -31,7 +31,7 @@ export default Vue.extend({
   name: 'ProductFormAdd',
   data(){
     return {
-      product: ProductTableRowFabric('', '', '', '') as ProductTableRowInterface
+      product: ProductTableRowFabric('', 0, 0) as ProductTableRowInterface
     }
   },
   methods: {
@@ -39,7 +39,7 @@ export default Vue.extend({
     submitForm(){
       const immutableProduct = {...this.product}
       this.ADD_PRODUCT(immutableProduct)
-      this.product = ProductTableRowFabric('', '', '')
+      this.product = ProductTableRowFabric('', 0, 0)
     }
   }
 })
