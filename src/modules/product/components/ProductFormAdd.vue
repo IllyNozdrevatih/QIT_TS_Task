@@ -7,10 +7,10 @@
       <div class="col-lg-8">
         <div class="row">
           <div class="col-auto">
-            <input class="form-control" v-model="product.price" type="number" placeholder="Price" required>
+            <input class="form-control" v-model="product.price" type="number" placeholder="Price" min="1" required>
           </div>
           <div class="col-auto">
-            <input class="form-control" v-model="product.quantity" type="number" placeholder="Qty" required>
+            <input class="form-control" v-model="product.quantity" type="number" placeholder="Qty" min="1" required>
           </div>
           <div class="col-auto">
             <button type="submit" class="btn btn-primary">Add</button>
